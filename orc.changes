@@ -1,0 +1,16 @@
+* Fri Sep 02 2011 Carsten Munk <carsten@maemo.org> - 0.4.11
+- Remove gtk-doc dependancy
+
+* Fri Jan 28 2011 Topi Santakivi <topi.santakivi@digia.com> - 0.4.11
+- add-armv7l-to-as-host-defines.patch (BMC#13056)
+
+* Thu Nov 04 2010 Ling Yue <ling.yue@intel.com> - 0.4.11
+- Upgrade to 0.4.11 (BMC#10209)
+
+* Tue Aug 10 2010 Carsten Munk <carsten@maemo.org> - 0.4.5
+- Fix ARM build error (hardcoded cross compiler)
+- Disable tests for ARM as NEON isn't properly supported in QEMU target.
+
+* Wed Jul 28 2010 Ling Yue <ling.yue@intel.com> - 0.4.5
+- Init 0.4.5 (import from F13 update)
+

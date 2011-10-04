@@ -1,0 +1,13 @@
+Signed-off-by: Topi Santakivi <topi.santakivi@digia.com>
+---
+--- orc-0.4.11/m4/as-host-defines-orig.m4	2011-01-28 08:45:36.424943003 +0200
++++ orc-0.4.11/m4/as-host-defines.m4	2011-01-28 08:50:57.808942569 +0200
+@@ -23,7 +23,7 @@
+       HAVE_POWERPC=yes
+       AC_DEFINE(HAVE_POWERPC, 1, [Defined if host is powerpc])
+       ;;
+-    xarm)
++    xarm|xarmv7l)
+       HAVE_ARM=yes
+       AC_DEFINE(HAVE_ARM, 1, [Defined if host is arm])
+       ;;
