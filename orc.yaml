@@ -1,6 +1,6 @@
 Name: orc
 Summary: The Oil Run-time Compiler
-Version: 0.4.11
+Version: 0.4.16
 Release: 1
 Group: System/Libraries
 License: BSD
@@ -9,7 +9,6 @@ Sources:
     - http://code.entropywave.com/download/orc/orc-%{version}.tar.gz
 Patches:
     - orc-0.4.5-arm-build-failure.patch
-    - add-armv7l-to-as-host-defines.patch
 Description: |
     Orc is a library and set of tools for compiling and executing
     very simple programs that operate on arrays of data.  The "language"

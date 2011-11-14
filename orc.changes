@@ -1,3 +1,7 @@
+* Fri Nov 11 2011 Marko Saukko <marko.saukko@cybercom.com> - 0.4.16
+- Updated to 0.4.16.
+- Removed: add-armv7l-to-as-host-defines.patch
+
 * Fri Sep 02 2011 Carsten Munk <carsten@maemo.org> - 0.4.11
 - Remove gtk-doc dependancy
 
