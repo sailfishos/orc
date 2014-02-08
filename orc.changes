@@ -1,3 +1,6 @@
+* Sat Feb 08 2014 Chris Leach <cxl000@hotmail.com> - 0.4.18
+- Updated orc to 0.4.18.
+
 * Fri Nov 11 2011 Marko Saukko <marko.saukko@cybercom.com> - 0.4.16
 - Updated to 0.4.16.
 - Removed: add-armv7l-to-as-host-defines.patch
