@@ -41,7 +41,7 @@ on orc.
 %setup -q -n %{name}-%{version}/orc
 
 %build
-autoreconf -i -f
+NOCONFIGURE=1 ./autogen.sh
 %configure \
   --disable-gtk-doc \
   --enable-shared \
