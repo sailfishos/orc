@@ -58,12 +58,6 @@ find %{buildroot}/%{_libdir} -name \*.a -or -name \*.la -delete
 %clean
 rm -rf %{buildroot}
 
-
-%check
-%ifnarch %{arm}
-make check
-%endif
-
 %post -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
