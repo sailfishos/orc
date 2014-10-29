@@ -1,0 +1,3 @@
+[submodule "orc"]
+	path = orc
+	url = git://anongit.freedesktop.org/gstreamer/orc
