@@ -1,14 +1,13 @@
 Name:       orc
 Summary:    The Oil Run-time Compiler
-Version:    0.4.26
+Version:    0.4.32
 Release:    1
-Group:      System/Libraries
 License:    BSD
-URL:        http://code.entropywave.com/projects/orc/
-Source0:    http://code.entropywave.com/download/orc/%{name}-%{version}.tar.gz
+URL:        http://cgit.freedesktop.org/gstreamer/orc/
+Source0:    %{name}-%{version}.tar.gz
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
-BuildRequires:  libtool
+BuildRequires: meson
 
 %description
 Orc is a library and set of tools for compiling and executing
@@ -19,7 +18,6 @@ subtraction, and many arithmetic operations.
 
 %package compiler
 Summary:    Orc compiler
-Group:      Development/Libraries
 Requires:   %{name} = %{version}-%{release}
 Requires:   pkgconfig
 
@@ -28,7 +26,6 @@ The Orc compiler, to produce optimized code.
 
 %package devel
 Summary:    Development files and static libraries for Orc
-Group:      Development/Libraries
 Requires:   %{name} = %{version}-%{release}
 Requires:   %{name}-compiler
 Requires:   pkgconfig
@@ -38,22 +35,18 @@ This package contains the files needed to build packages that depend
 on orc.
 
 %prep
-%setup -q -n %{name}-%{version}/orc
+%autosetup -p1 -n %{name}-%{version}/orc
 
 %build
-NOCONFIGURE=1 ./autogen.sh
-%configure \
-  --disable-gtk-doc \
-  --enable-shared \
-  --disable-static
-
-make %{?jobs:-j%jobs}
+%meson -Ddefault_library=shared -Dgtk_doc=disabled
+%meson_build
 
 %install
-%make_install
+
+%meson_install
 
 # Remove unneeded files.
-find %{buildroot}/%{_libdir} -name \*.a -or -name \*.la -delete
+find %{buildroot}/%{_libdir} -name \*.a -delete
 
 %clean
 rm -rf %{buildroot}
@@ -63,6 +56,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
+%license COPYING
 %{_libdir}/liborc-*.so.*
 
 %files compiler
@@ -74,5 +68,6 @@ rm -rf %{buildroot}
 %{_includedir}/orc-0.4/
 %{_libdir}/liborc-*.so
 %{_libdir}/pkgconfig/orc-0.4.pc
+%{_libdir}/pkgconfig/orc-test-0.4.pc
 %{_bindir}/orc-bugreport
 %{_datadir}/aclocal/orc.m4
