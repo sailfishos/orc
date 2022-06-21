@@ -4,8 +4,8 @@ Version:    0.4.26
 Release:    1
 Group:      System/Libraries
 License:    BSD
-URL:        http://code.entropywave.com/projects/orc/
-Source0:    http://code.entropywave.com/download/orc/%{name}-%{version}.tar.gz
+URL:        https://github.com/sailfishos/orc
+Source0:    %{name}-%{version}.tar.gz
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
 BuildRequires:  libtool
