@@ -3,7 +3,7 @@ Summary:    The Oil Run-time Compiler
 Version:    0.4.32
 Release:    1
 License:    BSD
-URL:        http://cgit.freedesktop.org/gstreamer/orc/
+URL:        https://github.com/sailfishos/orc
 Source0:    %{name}-%{version}.tar.gz
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
