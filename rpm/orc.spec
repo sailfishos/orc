@@ -1,6 +1,6 @@
 Name:       orc
 Summary:    The Oil Run-time Compiler
-Version:    0.4.32
+Version:    0.4.33
 Release:    1
 License:    BSD
 URL:        https://github.com/sailfishos/orc
@@ -47,9 +47,6 @@ on orc.
 
 # Remove unneeded files.
 find %{buildroot}/%{_libdir} -name \*.a -delete
-
-%clean
-rm -rf %{buildroot}
 
 %post -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
