@@ -67,4 +67,3 @@ find %{buildroot}/%{_libdir} -name \*.a -delete
 %{_libdir}/pkgconfig/orc-0.4.pc
 %{_libdir}/pkgconfig/orc-test-0.4.pc
 %{_bindir}/orc-bugreport
-%{_datadir}/aclocal/orc.m4
