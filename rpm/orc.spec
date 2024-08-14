@@ -1,6 +1,6 @@
 Name:       orc
 Summary:    The Oil Run-time Compiler
-Version:    0.4.34
+Version:    0.4.39
 Release:    1
 License:    BSD
 URL:        https://github.com/sailfishos/orc
@@ -52,16 +52,13 @@ find %{buildroot}/%{_libdir} -name \*.a -delete
 %postun -p /sbin/ldconfig
 
 %files
-%defattr(-,root,root,-)
 %license COPYING
 %{_libdir}/liborc-*.so.*
 
 %files compiler
-%defattr(-,root,root,-)
 %{_bindir}/orcc
 
 %files devel
-%defattr(-,root,root,-)
 %{_includedir}/orc-0.4/
 %{_libdir}/liborc-*.so
 %{_libdir}/pkgconfig/orc-0.4.pc
