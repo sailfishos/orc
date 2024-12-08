@@ -1,6 +1,6 @@
 Name:       orc
 Summary:    The Oil Run-time Compiler
-Version:    0.4.39
+Version:    0.4.40
 Release:    1
 License:    BSD
 URL:        https://github.com/sailfishos/orc
