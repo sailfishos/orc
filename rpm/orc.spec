@@ -1,6 +1,6 @@
 Name:       orc
 Summary:    The Oil Run-time Compiler
-Version:    0.4.41
+Version:    0.4.42
 Release:    1
 License:    BSD
 URL:        https://github.com/sailfishos/orc
@@ -38,7 +38,7 @@ on orc.
 %autosetup -p1 -n %{name}-%{version}/orc
 
 %build
-%meson -Ddefault_library=shared -Dgtk_doc=disabled
+%meson -Ddefault_library=shared -Dhotdoc=disabled
 %meson_build
 
 %install
